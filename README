@@ -2,9 +2,13 @@ unittest_handle
 Python unittest handle for Google App Engine
 
 Copyright © 2010 Andrew D. Yates
+All Rights Reserved.
 andrew.yates@hhmds.com
 
-All Rights Reserved.
+http://github.com/andrewdyates/unittest_handle
+git@github.com:andrewdyates/unittest_handle.git
+
+===
 
 Capture unittest stdout output and return it as a string. This string
 can then be handled within an ordinary HTTP response. This is much
