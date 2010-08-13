@@ -1,0 +1,34 @@
+unittest_handle
+Python unittest handle for Google App Engine
+
+Copyright © 2010 Andrew D. Yates
+andrew.yates@hhmds.com
+
+All Rights Reserved.
+
+Capture unittest stdout output and return it as a string. This string
+can then be handled within an ordinary HTTP response. This is much
+simpler and has less dependencies than other testing frameworks for
+Python and App Engine.
+
+Example:
+
+>>> import sys
+... import unittest
+... import unittest_handle
+... 
+... class ExampleTest1(unittest.TestCase):
+...   def test_example(self):
+...     self.assertTrue(True)
+... 
+... class ExampleTest2(unittest.TestCase):
+...   def test_example(self):
+...     self.assertTrue(True)
+... 
+... def main(*args, **kwds):
+...   out = unittest_handle.run(ExampleTest1, ExampleTest2)
+...   print 'Content-Type: text/plain'
+...   print ''
+...   # avoid Python binary-to-ascii encoding errors in `print`
+...   sys.stdout.write(test_output)
+
