@@ -30,8 +30,6 @@ Example:
 ...   # avoid Python binary-to-ascii encoding errors in `print`
 ...   sys.stdout.write(test_output)
 """
-__authors__ = ['"Andrew D. Yates" <andrew.yates@hhmds.com>',]
-
 
 import StringIO
 import os
